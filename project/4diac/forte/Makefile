@@ -18,8 +18,7 @@ FORTE_FLAGS = \
 		-DCMAKE_CXX_COMPILER:PATH=$(EMBOX_GXX) \
 		-DCMAKE_SYSTEM_NAME:STRING=Generic \
 		-DCMAKE_BUILD_TYPE:STRING=None \
-		-DFORTE_EXTERNAL_MODULES_DIRECTORY=$(PROJECT_DIR)/4diac/forte/Embox_FB_lib \
-		-DFORTE_MODULE_EMBOX_LED=ON \ 
+		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 		# -DCMAKE_CXX_FLAGS:STRING="$(CXX_FLAGS)" \
 
 
@@ -35,9 +34,7 @@ $(BUILD):
 	cd $(PKG_SOURCE_DIR)/bin/embox && ( \
 		make \
 	)
-	touch $@
 
 $(INSTALL):
 	mv $(PKG_SOURCE_DIR)/bin/embox/src/forte $(PKG_INSTALL_DIR)/forte.o
-	touch $@
 
