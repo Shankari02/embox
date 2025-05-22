@@ -173,3 +173,7 @@ module atexit_test {
 module mkdir_test {
 	source "mkdir_test.c"
 }
+
+module rmdir_test {
+	source "rmdir_test.c"
+}
