@@ -1,0 +1,27 @@
+package embox.cmd.fs
+
+@AutoCmd
+@Cmd(name = "rmdir",
+	help = "Remove directories",
+	man = '''
+		NAME
+			rmdir - remove empty directories
+		SYNOPSIS
+			rmdir directory_name
+		DESCRIPTION
+			rmdir removes each specified directory, if it is empty.
+			This command is used to delete directories that do not contain files or subdirectories.
+		OPTIONS
+			--ignore-fail-on-non-empty
+				Ignore failures when directories are not empty.
+		AUTHORS
+			Your Name
+	''')
+module rmdir {
+	source "rmdir.c"
+
+	depends embox.compat.libc.all
+	depends embox.compat.posix.util.getopt
+	depends embox.framework.LibFramework
+	@NoRuntime depends embox.compat.posix.file_system
+}
