@@ -7,7 +7,7 @@
 
 #include <fcntl.h>  // for O_RDONLY
 #include <unistd.h> // for open/read/close
-#include </home/shankari/home/embox/third-party/libfdt/include/libfdt.h>
+#include <libfdt/include/libfdt.h>
 #include <kernel/printk.h> // for printk
 #include <devicetree/devicetree.h>
 
