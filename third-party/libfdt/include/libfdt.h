@@ -6,8 +6,8 @@
  * Copyright (C) 2006 David Gibson, IBM Corporation.
  */
 
-#include <devicetree/libfdt_env.h>
-#include <devicetree/fdt.h>
+#include </home/shankari/home/embox/third-party/libfdt/include/libfdt_env.h>
+#include </home/shankari/home/embox/third-party/libfdt/include/fdt.h>
 
 #ifdef __cplusplus
 extern "C" {
